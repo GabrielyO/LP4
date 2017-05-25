@@ -25,11 +25,6 @@ namespace TrabalhoBiblioteca
             InitializeComponent();
         }
 
-        public void btnSair_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
             FormCadastrarLivro Cadastrar = new FormCadastrarLivro();

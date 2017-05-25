@@ -22,26 +22,48 @@ namespace TrabalhoBiblioteca
 
         private void btnEnviarCadastro_Click(object sender, EventArgs e)
         {
+            //Conexão que cadastra livro
             MySqlCommand cmd = new MySqlCommand()
             {
                 Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd="),
                 CommandText = "INSERT INTO livro (Título, Autor, Editora) VALUES (@titulo, @autor, @editora);"
             };
 
-            Livro l = new Livro();
-            l.titulo = txttitulo.Text;
-            l.autor = txtautor.Text;
-            l.editora = txteditora.Text;
+            //Conexão que verifica se a Textbox está vazia
+            MySqlCommand cmd2 = new MySqlCommand()
+            {
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd="),
+                CommandText = "SELECT l.Título, l.Autor, l.Editora FROM livro l;"
+            };
 
-            cmd.Parameters.AddWithValue("@titulo", l.titulo); 
-            cmd.Parameters.AddWithValue("@autor", l.autor);
-            cmd.Parameters.AddWithValue("@editora", l.editora);
+            //Verificação
+            cmd2.Connection.Open();
+            MySqlDataReader resultado;
+            resultado = cmd2.ExecuteReader();
+            cmd2.Connection.Close();
 
-            cmd.Connection.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
+            bool leu = false;
 
-            MessageBox.Show("Livro cadastrado com sucesso");
+            if (resultado.HasRows)
+            {
+                resultado.Read();
+                Livro l = new Livro();
+                l.titulo = resultado.GetString(0);
+                l.autor = resultado.GetString(1);
+                l.editora = resultado.GetString(2);
+
+                cmd.Parameters.AddWithValue("@titulo", l.titulo);
+                cmd.Parameters.AddWithValue("@autor", l.autor);
+                cmd.Parameters.AddWithValue("@editora", l.editora);
+
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+
+                MessageBox.Show("Livro cadastrado com sucesso");                
+            }
+
+            else MessageBox.Show("Preencha todos os campos corretamente");            
         }
 
         public void btnVoltar_Click(object sender, EventArgs e)

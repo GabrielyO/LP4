@@ -8,11 +8,10 @@
         Title="MainWindow" Height="499.7" Width="650" WindowStartupLocation="CenterScreen">
     <Grid>
         <DockPanel HorizontalAlignment="Left" Height="52" LastChildFill="False" VerticalAlignment="Top" Width="642" Background="#FFB1E0DC">
-            <Button x:Name="btnAlterar" Content="Alterar&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82"/>
-            <Button x:Name="btnExcluir" Content="Excluir&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82"/>
+            <Button x:Name="btnAlterar" Content="Alterar&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82" IsEnabled="False"/>
+            <Button x:Name="btnExcluir" Content="Excluir&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82" IsEnabled="False"/>
             <Button x:Name="btnCadastrar" Content="Cadastrar&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82" Click="btnCadastrar_Click"/>
-            <Button x:Name="btnConsultar" Content="Consultar&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82" Click="btnConsultar_Click"/>
-            <Button x:Name="btnSair" Content="Sair" Height="49" VerticalAlignment="Top" Width="82" Click="btnSair_Click"/>
+            <Button x:Name="btnConsultar" Content="Consultar&#xD;&#xA;Livro" Height="49" VerticalAlignment="Top" Width="82" Click="btnConsultar_Click" IsEnabled="False"/>
         </DockPanel>
 
     </Grid>
