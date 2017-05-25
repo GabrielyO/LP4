@@ -36,5 +36,10 @@ namespace TrabalhoBiblioteca
             Cadastrar.ShowDialog();
         }
 
+        private void btnConsultar_Click(object sender, RoutedEventArgs e)
+        {
+            FormConsultar Consultar = new FormConsultar();
+            Consultar.ShowDialog();
+        }
     }
 }

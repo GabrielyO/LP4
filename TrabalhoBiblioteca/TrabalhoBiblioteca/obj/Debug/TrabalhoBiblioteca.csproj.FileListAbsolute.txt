@@ -14,3 +14,4 @@ C:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.Proper
 C:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.csproj.GenerateResource.Cache
 C:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.exe
 C:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.pdb
+C:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.FormConsultar.resources
