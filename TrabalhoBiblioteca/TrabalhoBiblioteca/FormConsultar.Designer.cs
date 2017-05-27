@@ -28,145 +28,208 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Código = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Título = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Autor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Editora = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.checkBoxTitulo = new System.Windows.Forms.CheckBox();
-            this.checkBoxAutor = new System.Windows.Forms.CheckBox();
-            this.checkBoxEditora = new System.Windows.Forms.CheckBox();
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.btnFazerConsulta = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.radiotitulo = new System.Windows.Forms.RadioButton();
+            this.radioautor = new System.Windows.Forms.RadioButton();
+            this.radioeditora = new System.Windows.Forms.RadioButton();
+            this.filtro = new System.Windows.Forms.GroupBox();
+            this.LISTA = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TÍTULO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AUTOR = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EDITORA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.filtro.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Código,
-            this.Título,
-            this.Autor,
-            this.Editora});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 96);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(610, 357);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // Código
-            // 
-            this.Código.Text = "Código";
-            this.Código.Width = 52;
-            // 
-            // Título
-            // 
-            this.Título.Text = "Título";
-            this.Título.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Título.Width = 238;
-            // 
-            // Autor
-            // 
-            this.Autor.Text = "Autor";
-            this.Autor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Autor.Width = 235;
-            // 
-            // Editora
-            // 
-            this.Editora.Text = "Editora";
-            this.Editora.Width = 445;
-            // 
-            // checkBoxTitulo
-            // 
-            this.checkBoxTitulo.AutoSize = true;
-            this.checkBoxTitulo.Location = new System.Drawing.Point(96, 21);
-            this.checkBoxTitulo.Name = "checkBoxTitulo";
-            this.checkBoxTitulo.Size = new System.Drawing.Size(54, 17);
-            this.checkBoxTitulo.TabIndex = 1;
-            this.checkBoxTitulo.Text = "Título";
-            this.checkBoxTitulo.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAutor
-            // 
-            this.checkBoxAutor.AutoSize = true;
-            this.checkBoxAutor.Location = new System.Drawing.Point(96, 44);
-            this.checkBoxAutor.Name = "checkBoxAutor";
-            this.checkBoxAutor.Size = new System.Drawing.Size(51, 17);
-            this.checkBoxAutor.TabIndex = 2;
-            this.checkBoxAutor.Text = "Autor";
-            this.checkBoxAutor.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEditora
-            // 
-            this.checkBoxEditora.AutoSize = true;
-            this.checkBoxEditora.Location = new System.Drawing.Point(96, 67);
-            this.checkBoxEditora.Name = "checkBoxEditora";
-            this.checkBoxEditora.Size = new System.Drawing.Size(59, 17);
-            this.checkBoxEditora.TabIndex = 3;
-            this.checkBoxEditora.Text = "Editora";
-            this.checkBoxEditora.UseVisualStyleBackColor = true;
             // 
             // txtConsulta
             // 
-            this.txtConsulta.Location = new System.Drawing.Point(177, 19);
+            this.txtConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsulta.Location = new System.Drawing.Point(385, 37);
             this.txtConsulta.Name = "txtConsulta";
-            this.txtConsulta.Size = new System.Drawing.Size(318, 20);
+            this.txtConsulta.Size = new System.Drawing.Size(554, 29);
             this.txtConsulta.TabIndex = 4;
             // 
             // btnFazerConsulta
             // 
-            this.btnFazerConsulta.Location = new System.Drawing.Point(294, 45);
+            this.btnFazerConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFazerConsulta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFazerConsulta.FlatAppearance.BorderSize = 5;
+            this.btnFazerConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnFazerConsulta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFazerConsulta.Location = new System.Drawing.Point(526, 72);
             this.btnFazerConsulta.Name = "btnFazerConsulta";
-            this.btnFazerConsulta.Size = new System.Drawing.Size(80, 26);
+            this.btnFazerConsulta.Size = new System.Drawing.Size(263, 36);
             this.btnFazerConsulta.TabIndex = 5;
             this.btnFazerConsulta.Text = "Consultar";
             this.btnFazerConsulta.UseVisualStyleBackColor = true;
+            this.btnFazerConsulta.Click += new System.EventHandler(this.btnFazerConsulta_Click);
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(522, 19);
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVoltar.FlatAppearance.BorderSize = 5;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnVoltar.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(994, 28);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(70, 41);
+            this.btnVoltar.Size = new System.Drawing.Size(109, 51);
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // radiotitulo
+            // 
+            this.radiotitulo.AutoSize = true;
+            this.radiotitulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radiotitulo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiotitulo.Location = new System.Drawing.Point(65, 25);
+            this.radiotitulo.Name = "radiotitulo";
+            this.radiotitulo.Size = new System.Drawing.Size(88, 26);
+            this.radiotitulo.TabIndex = 7;
+            this.radiotitulo.TabStop = true;
+            this.radiotitulo.Text = "TÍTULO";
+            this.radiotitulo.UseVisualStyleBackColor = true;
+            // 
+            // radioautor
+            // 
+            this.radioautor.AutoSize = true;
+            this.radioautor.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioautor.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioautor.Location = new System.Drawing.Point(65, 54);
+            this.radioautor.Name = "radioautor";
+            this.radioautor.Size = new System.Drawing.Size(87, 26);
+            this.radioautor.TabIndex = 8;
+            this.radioautor.TabStop = true;
+            this.radioautor.Text = "AUTOR";
+            this.radioautor.UseVisualStyleBackColor = true;
+            // 
+            // radioeditora
+            // 
+            this.radioeditora.AutoSize = true;
+            this.radioeditora.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioeditora.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioeditora.Location = new System.Drawing.Point(65, 80);
+            this.radioeditora.Name = "radioeditora";
+            this.radioeditora.Size = new System.Drawing.Size(102, 26);
+            this.radioeditora.TabIndex = 9;
+            this.radioeditora.TabStop = true;
+            this.radioeditora.Text = "EDITORA";
+            this.radioeditora.UseVisualStyleBackColor = true;
+            // 
+            // filtro
+            // 
+            this.filtro.Controls.Add(this.radiotitulo);
+            this.filtro.Controls.Add(this.radioeditora);
+            this.filtro.Controls.Add(this.radioautor);
+            this.filtro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.filtro.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtro.Location = new System.Drawing.Point(178, 3);
+            this.filtro.Name = "filtro";
+            this.filtro.Size = new System.Drawing.Size(167, 111);
+            this.filtro.TabIndex = 10;
+            this.filtro.TabStop = false;
+            this.filtro.Text = "FILTRAR";
+            // 
+            // LISTA
+            // 
+            this.LISTA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LISTA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.LISTA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LISTA.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.TÍTULO,
+            this.AUTOR,
+            this.EDITORA});
+            this.LISTA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LISTA.GridLines = true;
+            this.LISTA.Location = new System.Drawing.Point(31, 120);
+            this.LISTA.MultiSelect = false;
+            this.LISTA.Name = "LISTA";
+            this.LISTA.Size = new System.Drawing.Size(1319, 315);
+            this.LISTA.TabIndex = 11;
+            this.LISTA.UseCompatibleStateImageBehavior = false;
+            this.LISTA.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 69;
+            // 
+            // TÍTULO
+            // 
+            this.TÍTULO.Text = "TÍTULO";
+            this.TÍTULO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TÍTULO.Width = 577;
+            // 
+            // AUTOR
+            // 
+            this.AUTOR.Text = "AUTOR";
+            this.AUTOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AUTOR.Width = 367;
+            // 
+            // EDITORA
+            // 
+            this.EDITORA.Text = "EDITORA";
+            this.EDITORA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EDITORA.Width = 303;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(178, 441);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(446, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Se desejar exibir todos os livros cadastrados, apenas clique em consultar sem esc" +
+    "rever nada.";
+            // 
             // FormConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 465);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(1362, 463);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LISTA);
+            this.Controls.Add(this.filtro);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFazerConsulta);
             this.Controls.Add(this.txtConsulta);
-            this.Controls.Add(this.checkBoxEditora);
-            this.Controls.Add(this.checkBoxAutor);
-            this.Controls.Add(this.checkBoxTitulo);
-            this.Controls.Add(this.listView1);
             this.Name = "FormConsultar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConsultar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.filtro.ResumeLayout(false);
+            this.filtro.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Código;
-        private System.Windows.Forms.ColumnHeader Título;
-        private System.Windows.Forms.ColumnHeader Autor;
-        private System.Windows.Forms.ColumnHeader Editora;
-        private System.Windows.Forms.CheckBox checkBoxTitulo;
-        private System.Windows.Forms.CheckBox checkBoxAutor;
-        private System.Windows.Forms.CheckBox checkBoxEditora;
         private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.Button btnFazerConsulta;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.RadioButton radiotitulo;
+        private System.Windows.Forms.RadioButton radioautor;
+        private System.Windows.Forms.RadioButton radioeditora;
+        private System.Windows.Forms.GroupBox filtro;
+        private System.Windows.Forms.ListView LISTA;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader TÍTULO;
+        private System.Windows.Forms.ColumnHeader AUTOR;
+        private System.Windows.Forms.ColumnHeader EDITORA;
+        private System.Windows.Forms.Label label1;
     }
 }
