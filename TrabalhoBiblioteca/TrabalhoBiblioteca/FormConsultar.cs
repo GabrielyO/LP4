@@ -30,9 +30,6 @@ namespace TrabalhoBiblioteca
                 LISTA.Items.Add(item);
             }
             txtConsulta.Clear();
-            radiotitulo.Checked = false;
-            radioautor.Checked = false;
-            radioeditora.Checked = false;
         }
 
         //Volta para a MainWindows.
@@ -131,32 +128,72 @@ namespace TrabalhoBiblioteca
                 PreencherListView(LIVROS);
                 cmd.Connection.Close();
             }
-            else if (txtConsulta.Text == string.Empty)
-            {
-                cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Título ASC;";
-                LISTA.Items.Clear();
-                cmd.Connection.Open();
-                MySqlDataReader r;
-                r = cmd.ExecuteReader();
-
-                List<Livro> LIVROS = new List<Livro>();
-
-                if (r.HasRows)
-                {
-                    while (r.Read())
-                    {
-                        Livro L = new Livro();
-                        L.id = r.GetInt32(0);
-                        L.titulo = r.GetString(1);
-                        L.autor = r.GetString(2);
-                        L.editora = r.GetString(3);
-                        LIVROS.Add(L);
-                    }
-                }
-
-                PreencherListView(LIVROS);
-                cmd.Connection.Close();
-            }
         }
+
+        private void btnID_Click(object sender, EventArgs e)
+        {
+            MySqlCommand cmd = new MySqlCommand
+            {
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+            };
+            cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Id ASC;";
+            LISTA.Items.Clear();
+            cmd.Connection.Open();
+            MySqlDataReader r;
+            r = cmd.ExecuteReader();
+
+            List<Livro> LIVROS = new List<Livro>();
+
+            if (r.HasRows)
+            {
+                while (r.Read())
+                {
+                    Livro L = new Livro();
+                    L.id = r.GetInt32(0);
+                    L.titulo = r.GetString(1);
+                    L.autor = r.GetString(2);
+                    L.editora = r.GetString(3);
+                    LIVROS.Add(L);
+                }
+            }
+
+            PreencherListView(LIVROS);
+            cmd.Connection.Close();
+
+        }
+
+        private void btnTITULO_Click(object sender, EventArgs e)
+        {
+            MySqlCommand cmd = new MySqlCommand
+            {
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+            };
+            cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Título ASC;";
+            LISTA.Items.Clear();
+            cmd.Connection.Open();
+            MySqlDataReader r;
+            r = cmd.ExecuteReader();
+
+            List<Livro> LIVROS = new List<Livro>();
+
+            if (r.HasRows)
+            {
+                while (r.Read())
+                {
+                    Livro L = new Livro();
+                    L.id = r.GetInt32(0);
+                    L.titulo = r.GetString(1);
+                    L.autor = r.GetString(2);
+                    L.editora = r.GetString(3);
+                    LIVROS.Add(L);
+                }
+            }
+
+            PreencherListView(LIVROS);
+            cmd.Connection.Close();
+
+        }
+
+
     }
 }

@@ -40,7 +40,8 @@
             this.TÍTULO = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AUTOR = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.EDITORA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnID = new System.Windows.Forms.Button();
+            this.btnTITULO = new System.Windows.Forms.Button();
             this.filtro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,17 +183,37 @@
             this.EDITORA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EDITORA.Width = 303;
             // 
-            // label1
+            // btnID
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 441);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(446, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Se desejar exibir todos os livros cadastrados, apenas clique em consultar sem esc" +
-    "rever nada.";
+            this.btnID.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnID.FlatAppearance.BorderSize = 5;
+            this.btnID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnID.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnID.Location = new System.Drawing.Point(31, 12);
+            this.btnID.Name = "btnID";
+            this.btnID.Size = new System.Drawing.Size(141, 38);
+            this.btnID.TabIndex = 13;
+            this.btnID.Text = "Tudo por ID";
+            this.btnID.UseVisualStyleBackColor = true;
+            this.btnID.Click += new System.EventHandler(this.btnID_Click);
+            // 
+            // btnTITULO
+            // 
+            this.btnTITULO.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTITULO.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTITULO.FlatAppearance.BorderSize = 5;
+            this.btnTITULO.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnTITULO.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTITULO.Location = new System.Drawing.Point(31, 50);
+            this.btnTITULO.Name = "btnTITULO";
+            this.btnTITULO.Size = new System.Drawing.Size(141, 38);
+            this.btnTITULO.TabIndex = 14;
+            this.btnTITULO.Text = "Tudo por TÍTULO";
+            this.btnTITULO.UseVisualStyleBackColor = true;
+            this.btnTITULO.Click += new System.EventHandler(this.btnTITULO_Click);
             // 
             // FormConsultar
             // 
@@ -200,7 +221,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1362, 463);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnTITULO);
+            this.Controls.Add(this.btnID);
             this.Controls.Add(this.LISTA);
             this.Controls.Add(this.filtro);
             this.Controls.Add(this.btnVoltar);
@@ -230,6 +252,7 @@
         private System.Windows.Forms.ColumnHeader TÍTULO;
         private System.Windows.Forms.ColumnHeader AUTOR;
         private System.Windows.Forms.ColumnHeader EDITORA;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnID;
+        private System.Windows.Forms.Button btnTITULO;
     }
 }
