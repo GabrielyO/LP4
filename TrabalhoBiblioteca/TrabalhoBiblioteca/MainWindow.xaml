@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:TrabalhoBiblioteca"
         mc:Ignorable="d"
         Title="MainWindow" WindowStartupLocation="CenterScreen" Background="#FF80FFA9" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center">
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="0,0,2,0" Background="#FF2285AA">
         <Grid HorizontalAlignment="Center" Margin="48,79,30,216" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="421*"/>
                 <ColumnDefinition Width="259*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnAlterar" Content="Alterar&#xA;Livro" Height="198" VerticalAlignment="Center" IsEnabled="False" RenderTransformOrigin="0.5,0.5" Margin="10,1,254,10" HorizontalContentAlignment="Center" BorderBrush="Black" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="157"/>
-            <Button x:Name="btnExcluir" Content="Excluir&#xA;Livro" Height="198" VerticalAlignment="Center" Margin="190,0,83,11" HorizontalContentAlignment="Center" BorderBrush="Black" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="148" IsEnabled="False"/>
-            <Button x:Name="btnCadastrar" Content="Cadastrar&#xA;Livro" Height="198" VerticalAlignment="Center" Click="btnCadastrar_Click" Margin="361,0,171,11" HorizontalContentAlignment="Center" BorderBrush="Black" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="148" Grid.ColumnSpan="2"/>
-            <Button x:Name="btnConsultar" Content="Consultar&#xA;Livro" Height="198" VerticalAlignment="Center" Click="btnConsultar_Click" Margin="108,0,0,11" HorizontalContentAlignment="Center" BorderBrush="Black" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="151" Grid.Column="1"/>
+            <Button x:Name="btnAlterar" Content="Alterar&#xA;Livro" Height="198" VerticalAlignment="Center" IsEnabled="False" RenderTransformOrigin="0.5,0.5" Margin="10,1,254,10" HorizontalContentAlignment="Center" BorderBrush="White" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="157" Background="#FF50FFF7" Cursor="Arrow" Foreground="#FF2285AA" TextOptions.TextHintingMode="Fixed"/>
+            <Button x:Name="btnExcluir" Content="Excluir&#xA;Livro" Height="198" VerticalAlignment="Center" Margin="190,0,83,11" HorizontalContentAlignment="Center" BorderBrush="White" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="148" IsEnabled="False" Background="#FF50FFF7" Cursor="Arrow" Foreground="#FF2285AA" TextOptions.TextHintingMode="Fixed"/>
+            <Button x:Name="btnCadastrar" Content="Cadastrar&#xA;Livro" Height="198" VerticalAlignment="Center" Click="btnCadastrar_Click" Margin="361,0,171,11" HorizontalContentAlignment="Center" BorderBrush="White" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="148" Grid.ColumnSpan="2" Background="#FF50FFF7" Cursor="Arrow" Foreground="#FF2285AA" TextOptions.TextHintingMode="Fixed"/>
+            <Button x:Name="btnConsultar" Content="Consultar&#xA;Livro" Height="198" VerticalAlignment="Center" Click="btnConsultar_Click" Margin="108,0,0,11" HorizontalContentAlignment="Center" BorderBrush="White" FontFamily="Verdana" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" Width="151" Grid.Column="1" Background="#FF50FFF7" Cursor="Arrow" Foreground="#FF2285AA" TextOptions.TextHintingMode="Fixed"/>
         </Grid>
 
     </Grid>
