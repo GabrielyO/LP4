@@ -59,14 +59,15 @@
             // 
             // btnFazerConsulta
             // 
+            this.btnFazerConsulta.AccessibleName = "";
             this.btnFazerConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFazerConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
+            this.btnFazerConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(255)))), ((int)(((byte)(247)))));
             this.btnFazerConsulta.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnFazerConsulta.FlatAppearance.BorderSize = 5;
-            this.btnFazerConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnFazerConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFazerConsulta.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFazerConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.btnFazerConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.btnFazerConsulta.Location = new System.Drawing.Point(495, 73);
             this.btnFazerConsulta.Name = "btnFazerConsulta";
             this.btnFazerConsulta.Size = new System.Drawing.Size(263, 36);
@@ -77,12 +78,13 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
+            this.btnVoltar.AccessibleName = "";
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(255)))), ((int)(((byte)(247)))));
             this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnVoltar.FlatAppearance.BorderSize = 5;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.btnVoltar.Location = new System.Drawing.Point(928, 28);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(109, 51);
@@ -97,7 +99,7 @@
             this.radiotitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.radiotitulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radiotitulo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiotitulo.ForeColor = System.Drawing.Color.Black;
+            this.radiotitulo.ForeColor = System.Drawing.Color.White;
             this.radiotitulo.Location = new System.Drawing.Point(61, 19);
             this.radiotitulo.Name = "radiotitulo";
             this.radiotitulo.Size = new System.Drawing.Size(88, 26);
@@ -112,7 +114,7 @@
             this.radioautor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.radioautor.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioautor.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioautor.ForeColor = System.Drawing.Color.Black;
+            this.radioautor.ForeColor = System.Drawing.Color.White;
             this.radioautor.Location = new System.Drawing.Point(61, 48);
             this.radioautor.Name = "radioautor";
             this.radioautor.Size = new System.Drawing.Size(87, 26);
@@ -127,7 +129,7 @@
             this.radioeditora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.radioeditora.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radioeditora.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioeditora.ForeColor = System.Drawing.Color.Black;
+            this.radioeditora.ForeColor = System.Drawing.Color.White;
             this.radioeditora.Location = new System.Drawing.Point(61, 74);
             this.radioeditora.Name = "radioeditora";
             this.radioeditora.Size = new System.Drawing.Size(102, 26);
@@ -143,7 +145,7 @@
             this.filtro.Controls.Add(this.radioeditora);
             this.filtro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.filtro.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtro.ForeColor = System.Drawing.Color.Black;
+            this.filtro.ForeColor = System.Drawing.Color.White;
             this.filtro.Location = new System.Drawing.Point(147, 3);
             this.filtro.Name = "filtro";
             this.filtro.Size = new System.Drawing.Size(167, 111);
@@ -157,7 +159,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LISTA.BackColor = System.Drawing.Color.White;
-            this.LISTA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LISTA.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.TÍTULO,
@@ -169,7 +170,7 @@
             this.LISTA.Location = new System.Drawing.Point(31, 120);
             this.LISTA.MultiSelect = false;
             this.LISTA.Name = "LISTA";
-            this.LISTA.Size = new System.Drawing.Size(1319, 315);
+            this.LISTA.Size = new System.Drawing.Size(1313, 315);
             this.LISTA.TabIndex = 11;
             this.LISTA.UseCompatibleStateImageBehavior = false;
             this.LISTA.View = System.Windows.Forms.View.Details;
@@ -183,7 +184,7 @@
             // 
             this.TÍTULO.Text = "TÍTULO";
             this.TÍTULO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TÍTULO.Width = 577;
+            this.TÍTULO.Width = 578;
             // 
             // AUTOR
             // 
@@ -199,14 +200,15 @@
             // 
             // btnID
             // 
+            this.btnID.AccessibleName = "";
             this.btnID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
+            this.btnID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(255)))), ((int)(((byte)(247)))));
             this.btnID.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnID.FlatAppearance.BorderSize = 5;
-            this.btnID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnID.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.btnID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.btnID.Location = new System.Drawing.Point(0, 11);
             this.btnID.Name = "btnID";
             this.btnID.Size = new System.Drawing.Size(141, 38);
@@ -217,14 +219,15 @@
             // 
             // btnTITULO
             // 
+            this.btnTITULO.AccessibleName = "";
             this.btnTITULO.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTITULO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
+            this.btnTITULO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(255)))), ((int)(((byte)(247)))));
             this.btnTITULO.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnTITULO.FlatAppearance.BorderSize = 5;
-            this.btnTITULO.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnTITULO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTITULO.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTITULO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
+            this.btnTITULO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.btnTITULO.Location = new System.Drawing.Point(0, 44);
             this.btnTITULO.Name = "btnTITULO";
             this.btnTITULO.Size = new System.Drawing.Size(141, 38);
@@ -251,7 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
-            this.ClientSize = new System.Drawing.Size(1362, 463);
+            this.ClientSize = new System.Drawing.Size(1356, 463);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LISTA);
             this.Name = "FormConsultar";
@@ -275,12 +278,12 @@
         private System.Windows.Forms.RadioButton radioeditora;
         private System.Windows.Forms.GroupBox filtro;
         private System.Windows.Forms.ListView LISTA;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader TÍTULO;
-        private System.Windows.Forms.ColumnHeader AUTOR;
-        private System.Windows.Forms.ColumnHeader EDITORA;
         private System.Windows.Forms.Button btnID;
         private System.Windows.Forms.Button btnTITULO;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ColumnHeader ID;
+        public System.Windows.Forms.ColumnHeader TÍTULO;
+        public System.Windows.Forms.ColumnHeader AUTOR;
+        public System.Windows.Forms.ColumnHeader EDITORA;
     }
 }
