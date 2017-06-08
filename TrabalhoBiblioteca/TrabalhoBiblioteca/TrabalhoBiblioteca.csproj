@@ -68,6 +68,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="FormAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlterar.Designer.cs">
+      <DependentUpon>FormAlterar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastrarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="FormConsultar.Designer.cs">
       <DependentUpon>FormConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExcluir.Designer.cs">
+      <DependentUpon>FormExcluir.cs</DependentUpon>
     </Compile>
     <Compile Include="Livro.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -100,11 +112,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="FormAlterar.resx">
+      <DependentUpon>FormAlterar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastrarLivro.resx">
       <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultar.resx">
       <DependentUpon>FormConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExcluir.resx">
+      <DependentUpon>FormExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

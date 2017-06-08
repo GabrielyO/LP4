@@ -49,3 +49,5 @@ D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.FormCa
 D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.FormConsultar.resources
 D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.Properties.Resources.resources
 D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.csproj.GenerateResource.Cache
+D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.FormExcluir.resources
+D:\LP4\TrabalhoBiblioteca\TrabalhoBiblioteca\obj\Debug\TrabalhoBiblioteca.FormAlterar.resources
