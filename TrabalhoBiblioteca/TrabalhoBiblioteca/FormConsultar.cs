@@ -38,12 +38,11 @@ namespace TrabalhoBiblioteca
             this.Close();
         }
 
-
         private void btnFazerConsulta_Click(object sender, EventArgs e)
         {
             MySqlCommand cmd = new MySqlCommand
             {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
             };
 
             //Faço as consultas de acordo com os radios.
@@ -73,6 +72,12 @@ namespace TrabalhoBiblioteca
 
                 PreencherListView(LIVROS);
                 cmd.Connection.Close();
+
+                cmd.CommandText = ("SELECT COUNT(*) FROM livro WHERE Título LIKE (@titulo);");
+                cmd.Connection.Open();
+                count.Text = cmd.ExecuteScalar().ToString();
+                cmd.Connection.Close();
+
             }
             else if (radioautor.Checked && txtConsulta.Text != string.Empty)
             {
@@ -100,10 +105,15 @@ namespace TrabalhoBiblioteca
 
                 PreencherListView(LIVROS);
                 cmd.Connection.Close();
+
+                cmd.CommandText = ("SELECT COUNT(*) FROM livro l WHERE Autor LIKE (@autor);");
+                cmd.Connection.Open();
+                count.Text = cmd.ExecuteScalar().ToString();
+                cmd.Connection.Close();
             }
             else if (radioeditora.Checked && txtConsulta.Text != string.Empty)
             {
-                cmd.CommandText = "SELECT * FROM livro l WHERE Editora LIKE (@editora)";
+                cmd.CommandText = "SELECT * FROM livro l WHERE Editora LIKE (@editora);";
                 cmd.Parameters.AddWithValue("@editora", txtConsulta.Text + "%");
                 LISTA.Items.Clear();
                 cmd.Connection.Open();
@@ -127,6 +137,11 @@ namespace TrabalhoBiblioteca
 
                 PreencherListView(LIVROS);
                 cmd.Connection.Close();
+
+                cmd.CommandText = ("SELECT COUNT(*) FROM livro l WHERE Editora LIKE (@editora)");
+                cmd.Connection.Open();
+                count.Text = cmd.ExecuteScalar().ToString();
+                cmd.Connection.Close();
             }
         }
 
@@ -134,7 +149,7 @@ namespace TrabalhoBiblioteca
         {
             MySqlCommand cmd = new MySqlCommand
             {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
             };
             cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Id ASC;";
             LISTA.Items.Clear();
@@ -160,13 +175,17 @@ namespace TrabalhoBiblioteca
             PreencherListView(LIVROS);
             cmd.Connection.Close();
 
+            cmd.CommandText = ("SELECT COUNT(*) FROM livro;");
+            cmd.Connection.Open();
+            count.Text = cmd.ExecuteScalar().ToString();
+            cmd.Connection.Close();
         }
 
         private void btnTITULO_Click(object sender, EventArgs e)
         {
             MySqlCommand cmd = new MySqlCommand
             {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
             };
             cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Título ASC;";
             LISTA.Items.Clear();
@@ -190,6 +209,11 @@ namespace TrabalhoBiblioteca
             }
 
             PreencherListView(LIVROS);
+            cmd.Connection.Close();
+
+            cmd.CommandText = ("SELECT COUNT(*) FROM livro;");
+            cmd.Connection.Open();
+            count.Text = cmd.ExecuteScalar().ToString();
             cmd.Connection.Close();
 
         }

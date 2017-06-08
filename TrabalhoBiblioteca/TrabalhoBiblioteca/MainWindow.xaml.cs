@@ -41,14 +41,14 @@ namespace TrabalhoBiblioteca
 
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
-            FormExcluir Excluir = new FormExcluir();
-            Excluir.ShowDialog();
+            //FormExcluir Excluir = new FormExcluir();
+            //Excluir.ShowDialog();
         }
 
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
-            FormAlterar Alterar = new FormAlterar();
-            Alterar.Show();
+            //FormAlterar Alterar = new FormAlterar();
+            //Alterar.Show();
         }
     }
 }

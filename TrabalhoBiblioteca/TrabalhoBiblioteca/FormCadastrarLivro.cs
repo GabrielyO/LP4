@@ -23,7 +23,7 @@ namespace TrabalhoBiblioteca
             //Conexão que cadastra livro
             MySqlCommand cmd = new MySqlCommand()
             {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd="),
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root"),
                 CommandText = "INSERT INTO livro (Título, Autor, Editora) VALUES (@titulo, @autor, @editora);"
             };
 

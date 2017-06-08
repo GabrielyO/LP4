@@ -43,6 +43,8 @@
             this.btnID = new System.Windows.Forms.Button();
             this.btnTITULO = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.count = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.filtro.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -238,6 +240,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.count);
             this.panel1.Controls.Add(this.btnTITULO);
             this.panel1.Controls.Add(this.btnID);
             this.panel1.Controls.Add(this.filtro);
@@ -249,12 +252,34 @@
             this.panel1.Size = new System.Drawing.Size(1108, 120);
             this.panel1.TabIndex = 15;
             // 
+            // count
+            // 
+            this.count.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.count.Location = new System.Drawing.Point(1070, 44);
+            this.count.Name = "count";
+            this.count.Size = new System.Drawing.Size(35, 29);
+            this.count.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(1145, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(265, 24);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Quantidade de livros na busca";
+            // 
             // FormConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(1356, 463);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LISTA);
             this.Name = "FormConsultar";
@@ -266,6 +291,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,5 +311,7 @@
         public System.Windows.Forms.ColumnHeader TÍTULO;
         public System.Windows.Forms.ColumnHeader AUTOR;
         public System.Windows.Forms.ColumnHeader EDITORA;
+        private System.Windows.Forms.TextBox count;
+        private System.Windows.Forms.Label label1;
     }
 }
