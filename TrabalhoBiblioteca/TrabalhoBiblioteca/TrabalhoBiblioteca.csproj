@@ -80,6 +80,12 @@
     <Compile Include="FormConsultar.Designer.cs">
       <DependentUpon>FormConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExcluir.Designer.cs">
+      <DependentUpon>FormExcluir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Livro.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultar.resx">
       <DependentUpon>FormConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExcluir.resx">
+      <DependentUpon>FormExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
