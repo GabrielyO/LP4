@@ -284,6 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(133)))), ((int)(((byte)(170)))));
             this.ClientSize = new System.Drawing.Size(1322, 473);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "FormConsultar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

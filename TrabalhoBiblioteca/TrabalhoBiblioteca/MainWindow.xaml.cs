@@ -47,8 +47,8 @@ namespace TrabalhoBiblioteca
 
         private void btnAlterar_Click(object sender, RoutedEventArgs e)
         {
-            //FormAlterar Alterar = new FormAlterar();
-            //Alterar.Show();
+            FormAlterar Alterar = new FormAlterar();
+            Alterar.Show();
         }
     }
 }
