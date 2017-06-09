@@ -18,6 +18,14 @@ namespace TrabalhoBiblioteca
             InitializeComponent();
         }
 
+        public MySqlCommand Conectar()
+        {
+            MySqlCommand cmd = new MySqlCommand
+            {
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+            };
+            return cmd;
+        }
         //Método que preenche a lista.
         private void PreencherListView(List<Livro> LIVROS) {
             ListViewItem item;
@@ -40,13 +48,10 @@ namespace TrabalhoBiblioteca
 
         private void btnFazerConsulta_Click(object sender, EventArgs e)
         {
-            MySqlCommand cmd = new MySqlCommand
-            {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
-            };
+            MySqlCommand cmd = Conectar();
 
             //Faço as consultas de acordo com os radios.
-            if(radiotitulo.Checked && txtConsulta.Text != string.Empty)
+            if (radiotitulo.Checked && txtConsulta.Text != string.Empty)
             {
                 cmd.CommandText = "SELECT * FROM livro l WHERE Título LIKE (@titulo)";
                 cmd.Parameters.AddWithValue("@titulo", txtConsulta.Text + "%");
@@ -147,10 +152,7 @@ namespace TrabalhoBiblioteca
 
         private void btnID_Click(object sender, EventArgs e)
         {
-            MySqlCommand cmd = new MySqlCommand
-            {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
-            };
+            MySqlCommand cmd = Conectar();
             cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Id ASC;";
             LISTA.Items.Clear();
             cmd.Connection.Open();
@@ -181,12 +183,9 @@ namespace TrabalhoBiblioteca
             cmd.Connection.Close();
         }
 
-        private void btnTITULO_Click(object sender, EventArgs e)
+        public void btnTITULO_Click(object sender, EventArgs e)
         {
-            MySqlCommand cmd = new MySqlCommand
-            {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root")
-            };
+            MySqlCommand cmd = Conectar();
             cmd.CommandText = "SELECT * FROM livro l ORDER BY l.Título ASC;";
             LISTA.Items.Clear();
             cmd.Connection.Open();
@@ -217,7 +216,6 @@ namespace TrabalhoBiblioteca
             cmd.Connection.Close();
 
         }
-
 
     }
 }

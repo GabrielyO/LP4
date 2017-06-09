@@ -16,16 +16,23 @@ namespace TrabalhoBiblioteca
         public FormCadastrarLivro()
         {
             InitializeComponent();
-        }              
+        }
+
+        public MySqlCommand Conectar()
+        {
+            MySqlCommand cmd = new MySqlCommand
+            {
+                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=")
+            };
+            return cmd;
+        }
 
         private void btnEnviarCadastro_Click(object sender, EventArgs e)
         {
             //Conexão que cadastra livro
-            MySqlCommand cmd = new MySqlCommand()
-            {
-                Connection = new MySqlConnection("Server=127.0.0.1;Database=biblioteca;Uid=root;Pwd=root"),
-                CommandText = "INSERT INTO livro (Título, Autor, Editora) VALUES (@titulo, @autor, @editora);"
-            };
+
+            MySqlCommand cmd = Conectar();
+            cmd.CommandText = "INSERT INTO livro (Título, Autor, Editora) VALUES (@titulo, @autor, @editora);";
 
             if(txttitulo.Text == string.Empty || txtautor.Text == string.Empty || txteditora.Text == string.Empty)
                 MessageBox.Show("Preencha todos os campos corretamente"); 
